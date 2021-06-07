@@ -46,6 +46,15 @@ public class VerifyPageNavigation extends Main{
 			return status;
 	}
 	
+	public void navigateToUserManagement() {
+		driver.findElement(By.id("menu_admin_viewAdminModule")).click();
+	}
+	public void navigateToAddUser() {
+		driver.findElement(By.id("btnAdd")).click();
+	}
+	
+	
+	
 	public void closeBrowser() {
 		try {
 			Thread.sleep(3000);

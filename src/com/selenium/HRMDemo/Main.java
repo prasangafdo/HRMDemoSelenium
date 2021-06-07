@@ -33,6 +33,11 @@ public class Main{
 		login.setUsername("Admin");
 		login.setPassword("admin123");
 		System.out.println(login.verifyLogin());
+		navigation.navigateToUserManagement();
+		navigation.navigateToAddUser();
+		VerifyUserManagementPage usermgt = new VerifyUserManagementPage();
+		usermgt.setUser("Prasanga", "prasangafdz", "prasanga123");
+		usermgt.verifyAddUser();
 		
 		navigation.closeBrowser();//This will close the browser
 		
