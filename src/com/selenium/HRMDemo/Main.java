@@ -36,8 +36,11 @@ public class Main{
 		navigation.navigateToUserManagement();
 		navigation.navigateToAddUser();
 		VerifyUserManagementPage usermgt = new VerifyUserManagementPage();
-		usermgt.setUser("Prasanga", "prasangafdz", "prasanga123");
-		usermgt.verifyAddUser();
+		usermgt.setUserType("Admin");
+		usermgt.setUserStatus("Enabled");
+		
+		usermgt.setUser("Odis", "testusername2", "prasanga123");
+		System.out.println(usermgt.verifyAddUser());
 		
 		navigation.closeBrowser();//This will close the browser
 		
