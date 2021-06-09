@@ -1,6 +1,8 @@
 package com.selenium.HRMDemo;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 
 public class VerifyPageNavigation extends Main{
 	
@@ -65,5 +67,31 @@ public class VerifyPageNavigation extends Main{
 			e.printStackTrace();
 		}
 	}
+	
+	public void Wait() {
+		try {
+			Thread.sleep(2000);
+			//driver.close();
+			System.out.println("Waiting....");
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	public void setMouseOverOnJob() {
+		
+		WebElement item = driver.findElement(By.xpath("//*[@id=\"mainMenuFirstLevelUnorderedList\"]/li[1]/ul/li[2]")); //Selenium mouse over
+		Actions action = new Actions(driver);
+		action.moveToElement(item).perform();
+	}
+	
+	public void selectJobTitles() {
+		setMouseOverOnJob();
+		driver.findElement(By.id("menu_admin_viewJobTitleList")).click();
+		
+	}
+	
+	
 	
 }

@@ -33,23 +33,31 @@ public class Main{
 		login.setUsername("Admin");
 		login.setPassword("admin123");
 		System.out.println(login.verifyLogin());
+		
 		navigation.navigateToUserManagement();
 		navigation.navigateToAddUser();
+		
+		
+		/*
 		VerifyUserManagementPage usermgt = new VerifyUserManagementPage();
+		
 		usermgt.setUserType("Admin");
 		usermgt.setUserStatus("Enabled");
-		
-		usermgt.setUser("Odis", "testusername2", "prasanga123");
+		usermgt.setUser("Odis", "testusername5", "prasanga123");
 		System.out.println(usermgt.verifyAddUser());
 		
-		navigation.closeBrowser();//This will close the browser
+		navigation.Wait();
+		navigation.navigateToAddUser();
+		usermgt.setUserType("ESS");
+		usermgt.setUserStatus("Enabled");
+		usermgt.setUser("Odis", "testusername6", "prasanga123"); //Hard coding details for now
+		System.out.println(usermgt.verifyAddUser()); 
+		*/
+		navigation.selectJobTitles();
 		
-		//WebElement dropdown = driver.findElement(By.className("main-menu-first-level-list-item"));
-		//dropdown.click(); 
-		//dropdown.findElement(By.cssSelector("li[value=" + value + "]")).click();
-		
-		//driver.findElement(By.id("menu_admin_viewAdminModule")).click();
-		
+		VerifyJob job = new VerifyJob();
+		job.setJob("This is title", "desc", "note");
+		System.out.println(job.getJob());
 		
 	}
 	
