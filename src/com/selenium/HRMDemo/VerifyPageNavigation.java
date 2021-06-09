@@ -58,7 +58,7 @@ public class VerifyPageNavigation extends Main{
 	public void closeBrowser() {
 		try {
 			Thread.sleep(3000);
-			driver.close();
+			//driver.close();
 			System.out.println("Browser closed successfully");
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
