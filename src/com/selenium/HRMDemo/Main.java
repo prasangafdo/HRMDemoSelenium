@@ -38,7 +38,7 @@ public class Main{
 		navigation.navigateToAddUser();
 		
 		
-		/*
+		//Add new user
 		VerifyUserManagementPage usermgt = new VerifyUserManagementPage();
 		
 		usermgt.setUserType("Admin");
@@ -52,7 +52,9 @@ public class Main{
 		usermgt.setUserStatus("Enabled");
 		usermgt.setUser("Odis", "testusername6", "prasanga123"); //Hard coding details for now
 		System.out.println(usermgt.verifyAddUser()); 
-		*/
+		
+		
+		
 		navigation.selectJobTitles();
 		
 		VerifyJob job = new VerifyJob();
