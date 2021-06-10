@@ -33,7 +33,7 @@ public class VerifyUserManagementPage extends Main{
 	}
 	
 	public String verifyAddUser() {
-		String objective = "Verify6 the user can add another "+userType;
+		String objective = "Verify the user can add another "+userType;
 		String status = null;
 		getUserType();//Selecting user type in drop down list
 		getUserStatus();
@@ -55,7 +55,7 @@ public class VerifyUserManagementPage extends Main{
 		try {
 			Thread.sleep(2000);
 			driver.findElement(By.name("btnSave")).click();
-			status = "User added";
+			status = objective.concat(" Pass");
 			
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
