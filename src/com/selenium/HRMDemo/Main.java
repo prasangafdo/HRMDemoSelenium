@@ -4,8 +4,12 @@
 package com.selenium.HRMDemo;
 
 
+import java.io.IOException;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+
+import jxl.read.biff.BiffException;
 
 /**
  * @author Prasanga Fernando
@@ -23,7 +27,7 @@ public class Main{
 
 		//Main obj = new Main();
 		//System.out.println(obj.verifyLogin("Admin", "admin123"));
-		
+	/*	
 		VerifyPageNavigation navigation = new VerifyPageNavigation(); //Creating class object
 		navigation.setURL("https://www.google.lk/");
 		
@@ -52,15 +56,24 @@ public class Main{
 		usermgt.setUserStatus("Enabled");
 		usermgt.setUser("Odis", "testusername6", "prasanga123"); //Hard coding details for now
 		System.out.println(usermgt.verifyAddUser()); 
+
+		*/
 		
+		DDT ddt = new DDT();
+		try {
+			ddt.getJobData_Excel();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} 
 		
-		
+		/*
 		navigation.selectJobTitles();
 		
 		VerifyJob job = new VerifyJob();
 		job.setJob("This is title", "desc", "note");
 		System.out.println(job.getJob());
-		
+		*/
 	}
 	
 
