@@ -8,7 +8,7 @@ public class VerifyJob extends Main{
 	
 	VerifyPageNavigation navigation = new VerifyPageNavigation();
 	
-	public void setJob(String title, String description, String note) {
+	public void setJob(String title, String description, String note) {//Original method without DDT
 		this.jobDetails[0] = title;
 		this.jobDetails[1] = description;
 		this.jobDetails[2] = note;
@@ -17,6 +17,8 @@ public class VerifyJob extends Main{
 			System.out.println(a);
 		} */
 	}
+	
+	
 	
 	public String getJob() {
 		

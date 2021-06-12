@@ -27,7 +27,7 @@ public class Main{
 
 		//Main obj = new Main();
 		//System.out.println(obj.verifyLogin("Admin", "admin123"));
-	/*	
+	
 		VerifyPageNavigation navigation = new VerifyPageNavigation(); //Creating class object
 		navigation.setURL("https://www.google.lk/");
 		
@@ -39,9 +39,9 @@ public class Main{
 		System.out.println(login.verifyLogin());
 		
 		navigation.navigateToUserManagement();
-		navigation.navigateToAddUser();
+	/*			navigation.navigateToAddUser();
 		
-		
+	
 		//Add new user
 		VerifyUserManagementPage usermgt = new VerifyUserManagementPage();
 		
@@ -58,7 +58,7 @@ public class Main{
 		System.out.println(usermgt.verifyAddUser()); 
 
 		*/
-		
+		navigation.selectJobTitles();
 		DDT ddt = new DDT();
 		try {
 			ddt.getJobData_Excel();
@@ -68,7 +68,7 @@ public class Main{
 		} 
 		
 		/*
-		navigation.selectJobTitles();
+		
 		
 		VerifyJob job = new VerifyJob();
 		job.setJob("This is title", "desc", "note");

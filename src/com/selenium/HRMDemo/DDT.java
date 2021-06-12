@@ -69,8 +69,11 @@ public class DDT {
 			System.out.println(jobNote[i]);
 			System.out.println();
 		}
+		
+		DDTVerifyJob job = new DDTVerifyJob();
+		job.getJobtt(jobTitle, jobDesc, jobNote);
 	}
 	
-		
+	
 		
 	}
