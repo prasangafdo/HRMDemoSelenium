@@ -1,6 +1,7 @@
 package com.selenium.HRMDemo;
 
 import org.openqa.selenium.By;
+import org.testng.annotations.Test;
 
 public class VerifyJob extends Main{
 	
@@ -18,9 +19,8 @@ public class VerifyJob extends Main{
 		} */
 	}
 	
-	
-	
-	public String getJob() {
+	@Test
+	public String getJob() {//Planning to convert this class to a TestNG class
 		
 		String objective = "Verify the user can add a new \"Job Title\" :";
 		String status = "Pass";
