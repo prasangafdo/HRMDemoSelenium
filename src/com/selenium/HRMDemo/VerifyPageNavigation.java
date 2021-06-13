@@ -92,6 +92,12 @@ public class VerifyPageNavigation extends Main{
 		
 	}
 	
+	public void selectPayGrades() {
+		setMouseOverOnJob();
+		driver.findElement(By.id("menu_admin_viewPayGrades")).click();
+		
+	}
+	
 	
 	
 }

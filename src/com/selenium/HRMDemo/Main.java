@@ -58,14 +58,14 @@ public class Main{
 		System.out.println(usermgt.verifyAddUser()); 
 
 		*/
-		navigation.selectJobTitles();
-		DDT ddt = new DDT();
-		try {
-			ddt.getJobData_Excel();
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} 
+//		navigation.selectJobTitles();  //Working code oof DDT
+//		DDT ddt = new DDT();
+//		try {
+//			ddt.getJobData_Excel();
+//		} catch (Exception e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		} 
 		
 		/*
 		
@@ -74,6 +74,8 @@ public class Main{
 		job.setJob("This is title", "desc", "note");
 		System.out.println(job.getJob());
 		*/
+		navigation.selectPayGrades();
+		
 	}
 	
 
