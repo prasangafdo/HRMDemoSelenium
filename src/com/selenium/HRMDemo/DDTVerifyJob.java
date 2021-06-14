@@ -13,14 +13,32 @@ public class DDTVerifyJob extends Main{
 		
 		for(int i=0;i<jobTitle.length;i++) {//Assuming all the arrays have same length
 
+//			driver.findElement(By.id("btnAdd")).click();
+//			driver.findElement(By.id("jobTitle_jobTitle")).sendKeys(jobTitle[i]); //Entering data extracted from the excel sheet
+//			driver.findElement(By.id("jobTitle_jobDescription")).sendKeys(jobDesc[i]);
+//			driver.findElement(By.id("jobTitle_note")).sendKeys(jobNote[i]);
+//			driver.findElement(By.id("btnSave")).click();
+			//Job specification will be added later.
+			
 			driver.findElement(By.id("btnAdd")).click();
-			driver.findElement(By.id("jobTitle_jobTitle")).sendKeys(jobTitle[i]); //Will map with the setter later
+			driver.findElement(By.id("jobTitle_jobTitle")).sendKeys(jobTitle[i]); //Entering data extracted from the excel sheet
 			driver.findElement(By.id("jobTitle_jobDescription")).sendKeys(jobDesc[i]);
 			driver.findElement(By.id("jobTitle_note")).sendKeys(jobNote[i]);
 			driver.findElement(By.id("btnSave")).click();
-			//Job specification will be added later.
+			
 			
 			navigation.Wait();
+			try {
+				Thread.sleep(500);
+				
+				System.out.println( driver.findElement(By.xpath("//*[@id=\"frmList_ohrmListComponent\"]/div[2]")).getText());
+				
+				
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		
 			
 		}
 		
@@ -28,30 +46,20 @@ public class DDTVerifyJob extends Main{
 		
 	}
 	
-
+	//verify the user is in job title screen.
+	//https://opensource-demo.orangehrmlive.com/index.php/admin/viewJobTitleList
 	
-//	VerifyPageNavigation navigation = new VerifyPageNavigation();
+//get lement by id	ohrmList_chkSelectRecord_26
 	
-
-//	for(int i=0;i<arr.length;i++) {
-//		
-//	}
-//	
-	
-//	public String getJob() {
-//		
-//		String objective = "Verify the user can add a new \"Job Title\" :";
-//		String status = "Pass";
-//		
-//		driver.findElement(By.id("btnAdd")).click();
-//		driver.findElement(By.id("jobTitle_jobTitle")).sendKeys("ttttt"); //Will map with the setter later
-//		driver.findElement(By.id("jobTitle_jobDescription")).sendKeys("ddddddd");
-//		driver.findElement(By.id("jobTitle_note")).sendKeys("nnnn");
-//		driver.findElement(By.id("btnSave")).click();
-//		//Job specification will be added later.
-//		
-//		navigation.Wait();
-//		return objective.concat(status);
-//	}
-
+//checkbox and delete
+		
+		//delete button id btnDelete
+		
+		//After adding each element, we get below message, need to verify that
+		/*
+		 * <div class="message success fadable">
+			Successfully Saved   
+    		<a href="#" class="messageCloseButton">Close</a>
+			</div>
+		 */
 }
