@@ -46,13 +46,7 @@ public class DDTVerifyPayGrades extends Main{
 		 * 
 		 */
 			
-			/*
-			 * Modify DDT class
-			 * ================
-			 * Create a new method to read data from 2nd excel sheet and save data into a temporary array
-			 * Send those data to "addPayGrade" method
-			 * 
-			 */
+
 		}
 		return status;
 	}
