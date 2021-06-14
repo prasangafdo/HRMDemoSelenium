@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="0" passed="0" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-06-13T16:16:32 IST" name="Default suite" finished-at="2021-06-13T16:16:32 IST" duration-ms="7">
+  <suite started-at="2021-06-14T11:17:18 IST" name="Default suite" finished-at="2021-06-14T11:17:25 IST" duration-ms="7719">
     <groups>
     </groups>
-    <test started-at="2021-06-13T16:16:32 IST" name="Default test" finished-at="2021-06-13T16:16:32 IST" duration-ms="7">
+    <test started-at="2021-06-14T11:17:18 IST" name="Default test" finished-at="2021-06-14T11:17:25 IST" duration-ms="7719">
+      <class name="com.selenium.HRMDemoTestNG.VerifyLogin">
+        <test-method signature="verifyLoginWithCorrectCredentials()[pri:0, instance:com.selenium.HRMDemoTestNG.VerifyLogin@6986bbaf]" started-at="2021-06-14T11:17:18 IST" name="verifyLoginWithCorrectCredentials" finished-at="2021-06-14T11:17:25 IST" duration-ms="7690" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginWithCorrectCredentials -->
+      </class> <!-- com.selenium.HRMDemoTestNG.VerifyLogin -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

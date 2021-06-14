@@ -75,6 +75,7 @@ public class Main{
 		System.out.println(job.getJob());
 		*/
 		navigation.selectPayGrades();
+
 		
 	}
 	
