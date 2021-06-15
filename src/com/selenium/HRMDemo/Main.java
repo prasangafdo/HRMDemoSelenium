@@ -25,20 +25,17 @@ public class Main{
 	
 	public static void main(String[] args) {
 
-		//Main obj = new Main();
-		//System.out.println(obj.verifyLogin("Admin", "admin123"));
-	
-		VerifyPageNavigation navigation = new VerifyPageNavigation(); //Creating class object
-		navigation.setURL("https://www.google.lk/");
-		
-		System.out.println(navigation.navigateToLogin());//Add an enhancement: user should be able to change the url from here.
-		
-		VerifyLoginScreen login = new VerifyLoginScreen();
-		login.setUsername("Admin");
-		login.setPassword("admin123");
-		System.out.println(login.verifyLogin());
-		
-		navigation.navigateToUserManagement();
+//		VerifyPageNavigation navigation = new VerifyPageNavigation(); //Creating class object
+//		navigation.setURL("https://www.google.lk/");
+//		
+//		System.out.println(navigation.navigateToLogin());//Add an enhancement: user should be able to change the url from here.
+//		
+//		VerifyLoginScreen login = new VerifyLoginScreen();
+//		login.setUsername("Admin");
+//		login.setPassword("admin123");
+//		System.out.println(login.verifyLogin());
+//		
+//		navigation.navigateToUserManagement();
 	/*			navigation.navigateToAddUser();
 		
 	
@@ -74,7 +71,18 @@ public class Main{
 		job.setJob("This is title", "desc", "note");
 		System.out.println(job.getJob());
 		*/
-		navigation.selectPayGrades();
+	//	navigation.selectPayGrades();
+
+		DDT ddt = new DDT();
+		try {
+			ddt.getPayGradeData_Excel();
+		} catch (BiffException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 	}
 	
