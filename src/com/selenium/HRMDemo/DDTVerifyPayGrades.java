@@ -19,7 +19,26 @@ public class DDTVerifyPayGrades extends Main{
 			int minSal = Integer.parseInt(minSalary[i]);//Converting value of the array string to integer
 			int maxSal = Integer.parseInt(maxSalary[i]);
 			
-		//	driver.findElement(By.id("btnAdd")).click();
+			driver.findElement(By.id("btnAdd")).click();
+			
+			/* Send keys "payGrade_name"
+			 * Click on "btnSave"
+			 * Click on btnAddCurrency to add currency information
+			 * Send keys to payGradeCurrency_currencyName
+			 * Send keys to payGradeCurrency_minSalary
+			 * Send keys to payGradeCurrency_maxSalary
+			 * 
+			 */
+			
+			driver.findElement(By.id("payGrade_name")).sendKeys(name[i]);//Sending values from the array
+			driver.findElement(By.id("btnSave")).click();
+			
+			driver.findElement(By.id("btnAddCurrency")).click();
+			driver.findElement(By.id("payGradeCurrency_currencyName")).sendKeys(currency[i]);
+			driver.findElement(By.xpath("/html/body/div[4]/ul/li")).click(); //Selecting the first value from the drop down
+			driver.findElement(By.id("payGradeCurrency_minSalary")).sendKeys(minSalary[i]);
+			driver.findElement(By.id("payGradeCurrency_maxSalary")).sendKeys(maxSalary[i]);
+			
 //			driver.findElement(By.id("jobTitle_jobTitle")).sendKeys(jobTitle[i]); //Entering data extracted from the excel sheet
 //			driver.findElement(By.id("jobTitle_jobDescription")).sendKeys(jobDesc[i]);
 //			driver.findElement(By.id("jobTitle_note")).sendKeys(jobNote[i]);
