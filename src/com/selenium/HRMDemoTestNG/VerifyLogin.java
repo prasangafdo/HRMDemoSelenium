@@ -14,8 +14,7 @@ private String Password = "admin123";
 
 	static {
 		System.setProperty("webdriver.chrome.driver", "C:/Users/Prasanga Fernando/Documents/Eclipse/TestNG_PageTitle/chromedriver/chromedriver.exe");
-		
-	}
+			}
 	 WebDriver driver = new ChromeDriver();
 	 
 	@Test
