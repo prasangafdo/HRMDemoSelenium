@@ -104,21 +104,9 @@ public class DDT {
 			}
 		}
 		
-		for(String s:gradeName) {
-			System.out.println(s);
-		}
-		System.out.println();
-		for(String s:gradeCurrency) {
-			System.out.println(s);
-		}
-		System.out.println();
-		for(String s:gradeMinSalary) {
-			System.out.println(s);
-		}
-		System.out.println();
-		for(String s:gradeMaxSalary) {
-			System.out.println(s);
-		}
+		DDTVerifyPayGrades payGrade = new DDTVerifyPayGrades();
+		payGrade.addPayGrade(gradeName, gradeCurrency, gradeMinSalary, gradeMaxSalary);
+		
 	}
 	
 	

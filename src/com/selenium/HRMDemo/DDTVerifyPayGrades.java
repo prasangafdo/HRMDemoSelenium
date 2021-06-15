@@ -19,14 +19,13 @@ public class DDTVerifyPayGrades extends Main{
 			int minSal = Integer.parseInt(minSalary[i]);//Converting value of the array string to integer
 			int maxSal = Integer.parseInt(maxSalary[i]);
 			
-			driver.findElement(By.id("btnAdd")).click();
+		//	driver.findElement(By.id("btnAdd")).click();
 //			driver.findElement(By.id("jobTitle_jobTitle")).sendKeys(jobTitle[i]); //Entering data extracted from the excel sheet
 //			driver.findElement(By.id("jobTitle_jobDescription")).sendKeys(jobDesc[i]);
 //			driver.findElement(By.id("jobTitle_note")).sendKeys(jobNote[i]);
 //			driver.findElement(By.id("btnSave")).click();
 			
-			System.out.println(minSal);
-			System.out.println(maxSal);
+			
 	
 		
 		
@@ -46,8 +45,24 @@ public class DDTVerifyPayGrades extends Main{
 		 * 
 		 */
 			
-
+		}//End of the for loop
+		
+		for(String s:name) {
+			System.out.println(s);
 		}
+		System.out.println();
+		for(String s:currency) {
+			System.out.println(s);
+		}	
+		System.out.println();
+		for(String s:minSalary) {
+			System.out.println(s);
+		}
+		System.out.println();
+		for(String s:maxSalary) {
+			System.out.println(s);
+		}
+		status = "pass"; //Add a verification point
 		return status;
 	}
 	

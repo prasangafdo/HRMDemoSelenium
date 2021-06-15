@@ -27,7 +27,7 @@ public class VerifyPageNavigation extends Main{
 //		System.out.println("This is page2");
 //	return status;
 //	}
-	
+//	
 	
 	public String navigateToLogin() {
 		String objective = "Verify the user can search and navigate to the login screen: ";
@@ -55,8 +55,6 @@ public class VerifyPageNavigation extends Main{
 		driver.findElement(By.id("btnAdd")).click();
 	}
 	
-	
-	
 	public void closeBrowser() {
 		try {
 			Thread.sleep(3000);
@@ -71,8 +69,7 @@ public class VerifyPageNavigation extends Main{
 	public void Wait() {
 		try {
 			Thread.sleep(2000);
-			//driver.close();
-			System.out.println("Waiting....");
+			System.out.println("Waiting 2 seconds....");
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -80,7 +77,6 @@ public class VerifyPageNavigation extends Main{
 	}
 	
 	public void setMouseOverOnJob() {
-		
 		WebElement item = driver.findElement(By.xpath("//*[@id=\"mainMenuFirstLevelUnorderedList\"]/li[1]/ul/li[2]")); //Selenium mouse over
 		Actions action = new Actions(driver);
 		action.moveToElement(item).perform();
@@ -98,6 +94,15 @@ public class VerifyPageNavigation extends Main{
 		
 	}
 	
+	/*
+	 * navigation panel
+	 * hover on admin
+	 * hover on jobs
+	 * hover on pay grades and click
+	 */
 	
+//	mouse over on admin - //*[@id="mainMenuFirstLevelUnorderedList"]/li[1]
+//	mouse over on pay grades id - menu_admin_viewPayGrades
+// mouse over on job - //*[@id="mainMenuFirstLevelUnorderedList"]/li[1]/ul/li[2]
 	
 }
