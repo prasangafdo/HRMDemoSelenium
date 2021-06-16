@@ -2,7 +2,6 @@ package com.selenium.HRMDemo;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.Iterator;
 
 import jxl.Cell;
 import jxl.Sheet;
@@ -77,7 +76,7 @@ public class DDT {
 		int rowsCount = sheet.getRows();
 		int columnsCount = sheet.getColumns();
 		
-		System.out.println(rowsCount +" "+columnsCount);
+		//System.out.println(rowsCount +" "+columnsCount);  //For debugging only
 		
 		for(int i=1; i<rowsCount;i++) {
 			for(int j=0;j<columnsCount;j++) {
@@ -104,21 +103,9 @@ public class DDT {
 			}
 		}
 		
-		for(String s:gradeName) {
-			System.out.println(s);
-		}
-		System.out.println();
-		for(String s:gradeCurrency) {
-			System.out.println(s);
-		}
-		System.out.println();
-		for(String s:gradeMinSalary) {
-			System.out.println(s);
-		}
-		System.out.println();
-		for(String s:gradeMaxSalary) {
-			System.out.println(s);
-		}
+		DDTVerifyPayGrades payGrade = new DDTVerifyPayGrades();
+		payGrade.addPayGrade(gradeName, gradeCurrency, gradeMinSalary, gradeMaxSalary);
+		
 	}
 	
 	
