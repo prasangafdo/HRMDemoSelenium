@@ -10,10 +10,17 @@ import org.openqa.selenium.By;
  *
  */
 public class DDTVerifyPayGrades extends Main{
-	
+	/*
+	 * Extract data from excel sheet - done
+	 * save data temporary in an array - done
+	 * sendkeys to "payGrade_name" text field - done
+	 * Click on "btnSave" button - done
+	 * Verify the banner - done
+	 */
 	
 	
 	public String addPayGrade(String[] name, String[] currency, String minSalary[], String[] maxSalary ) {
+		String testObjective = "Verify the user can add a job :";
 		String status = "Fail";
 		
 		VerifyPageNavigation navigation = new VerifyPageNavigation();
@@ -34,57 +41,19 @@ public class DDTVerifyPayGrades extends Main{
 			driver.findElement(By.id("payGradeCurrency_maxSalary")).sendKeys(maxSalary[i]);
 			driver.findElement(By.id("btnSaveCurrency")).click();
 			
-			//use if and compare value whether it needed to be redirected or not
-			String actualMessage = driver.findElement(By.xpath("//*[@id=\"currency\"]/div[2]/div/text()")).getText();
+			String actualMessage = driver.findElement(By.xpath("//*[@id=\"currency\"]/div[2]/div")).getText();
 			String expectedMessage = "Successfully Saved";
-			System.out.println(actualMessage);
-
+			//System.out.println(actualMessage);
+			if(actualMessage.contains(expectedMessage)) {//To avoid white spaces in "Successfully Saved"
+				status = "Pass"; //
+			}
 			navigation.navigateToUserManagement();//User should be navigated to the user management page at first
 			navigation.setMouseOverOnJob();
-			navigation.selectPayGrades();
-			
-			
-			//*[@id="currency"]/div[2]/div
-			//*[@id="currency"]/div[2]/div/text()
-			/*
-			 * Get value from //*[@id="currency"]/div[2]/div and compare it with use contains method in Java string to avoid white spaces "Successfully Saved"
-			 */
-			//end if
-			
-			
-
-
-		/*
-		 * Cast string to integer on min and max salary - done
-		 * Click on "btnAdd" - done
-		 * Verify the user is navigated to https://opensource-demo.orangehrmlive.com/index.php/admin/payGrade - done
-		 * Extract data from excel sheet - done
-		 * save data temporary in an array - done
-		 * sendkeys to "payGrade_name" text field - done
-		 * Click on "btnSave" button - done
-		 * Verify the banner
-		 * 
-		 */
-			
+			navigation.selectPayGrades();				
 		}//End of the for loop
+
 		
-//		for(String s:name) {
-//			System.out.println(s);
-//		}
-//		System.out.println();
-//		for(String s:currency) {
-//			System.out.println(s);
-//		}	
-//		System.out.println();
-//		for(String s:minSalary) {
-//			System.out.println(s);
-//		}
-//		System.out.println();
-//		for(String s:maxSalary) {
-//			System.out.println(s);
-//		}
-		status = "pass"; //Add a verification point
-		return status;
+		return testObjective+status;
 	}
 	
 	

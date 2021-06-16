@@ -104,7 +104,7 @@ public class DDT {
 		}
 		
 		DDTVerifyPayGrades payGrade = new DDTVerifyPayGrades();
-		payGrade.addPayGrade(gradeName, gradeCurrency, gradeMinSalary, gradeMaxSalary);
+		System.out.println(payGrade.addPayGrade(gradeName, gradeCurrency, gradeMinSalary, gradeMaxSalary));
 		
 	}
 	
