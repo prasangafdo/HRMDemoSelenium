@@ -57,8 +57,8 @@ public class VerifyPageNavigation extends Main{
 	
 	public void closeBrowser() {
 		try {
-			Thread.sleep(3000);
-			//driver.close();
+			Thread.sleep(5000);//Waiting 5 seconds before closing the browser
+			driver.close();
 			System.out.println("Browser closed successfully");
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
@@ -69,7 +69,7 @@ public class VerifyPageNavigation extends Main{
 	public void Wait() {
 		try {
 			Thread.sleep(2000);
-			System.out.println("Waiting 2 seconds....");
+			System.out.println("Waiting 2 seconds...");
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -93,16 +93,13 @@ public class VerifyPageNavigation extends Main{
 		driver.findElement(By.id("menu_admin_viewPayGrades")).click();
 		
 	}
+
+	public void selectEmpStatus() {
+		setMouseOverOnJob();
+		driver.findElement(By.id("menu_admin_employmentStatus")).click();
+		
+	}
 	
-	/*
-	 * navigation panel
-	 * hover on admin
-	 * hover on jobs
-	 * hover on pay grades and click
-	 */
 	
-//	mouse over on admin - //*[@id="mainMenuFirstLevelUnorderedList"]/li[1]
-//	mouse over on pay grades id - menu_admin_viewPayGrades
-// mouse over on job - //*[@id="mainMenuFirstLevelUnorderedList"]/li[1]/ul/li[2]
-	
+
 }
