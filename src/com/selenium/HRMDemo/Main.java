@@ -136,7 +136,7 @@ public class Main{
 		*/
 		
 		//Beginning Job Category
-		navigation.navigateToUserManagement();//User should be navigated to the user management page at first
+	/*	navigation.navigateToUserManagement();//User should be navigated to the user management page at first
 		navigation.selectJobCategories();
 		DDT ddt = new DDT();
 		try {
@@ -154,6 +154,7 @@ public class Main{
 			e.printStackTrace();
 		}
 		//--End Job Category
+		*/
 		
 	}
 	
