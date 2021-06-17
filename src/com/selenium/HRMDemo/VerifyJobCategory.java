@@ -19,7 +19,15 @@ public class VerifyJobCategory extends Main{
 			driver.findElement(By.id("btnAdd")).click();
 			driver.findElement(By.id("jobCategory_name")).sendKeys(jobCategory[i]);
 			driver.findElement(By.id("btnSave")).click();
-			status = "Pass";
+			
+			String expectedResult = "Successfully Saved";
+			String actualResult = driver.findElement(By.xpath("//*[@id=\"frmList_ohrmListComponent\"]/div[2]")).getText();
+			
+			if(actualResult.equals(expectedResult)) {
+				status = "Pass";
+			}
+			else
+				status = "Fail";
 		}
 	}
 	
