@@ -108,7 +108,7 @@ public class Main{
 		
 		
 		//Beginning Employment Status
-		navigation.Wait();
+	/*	navigation.Wait();
 		navigation.navigateToUserManagement();//User should be navigated to the user management page at first
 		navigation.setMouseOverOnJob();
 		navigation.selectEmpStatus();
@@ -132,6 +132,29 @@ public class Main{
 			e.printStackTrace();
 		}
 		//--End Employment Status
+		
+		*/
+		
+		//Beginning Job Category
+	/*	navigation.navigateToUserManagement();//User should be navigated to the user management page at first
+		navigation.selectJobCategories();
+		DDT ddt = new DDT();
+		try {
+			ddt.setjobCategory_Excel();
+			
+			VerifyJobCategory jobCategory = new VerifyJobCategory();
+			jobCategory.setJobCategory(ddt.getjobCategory_Excel());
+			System.out.println(jobCategory.getJobCategoryStatus());
+			//System.out.println(ddt.getjobCategory_Excel());
+		} catch (BiffException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		//--End Job Category
+		*/
 		
 	}
 	

@@ -24,6 +24,8 @@ public class DDT {
 	
 	private String[] emplymentStatus = new String[4];
 	
+	private String[] jobCategory = new String[5];
+	
 	String fileLocation= "C:/Users/Prasanga Fernando/Documents/Eclipse/DataDrivenTesting/Book1.xls"; //Since I want to access these details from many methods, I'm making it global.
 	File file = new File(fileLocation);
 	String value = null;
@@ -136,6 +138,27 @@ public class DDT {
 		return emplymentStatus;
 	}
 	
+	//jobCategory
+	public void setjobCategory_Excel() throws BiffException, IOException {
+		Workbook wb = Workbook.getWorkbook(file);
+		Sheet sheet = wb.getSheet(4);
+		int rowsCount = sheet.getRows();
+		int columnsCount = sheet.getColumns();
+		String value;
+		
+		for(int i=0;i<rowsCount;i++) {
+			for(int j=0;j<columnsCount;j++) {
+				Cell cell = sheet.getCell(j,i);
+				value = cell.getContents();
+				jobCategory[i] = value;
+				//System.out.println(value);
+			}
+		}
+	}
+	
+	public String[] getjobCategory_Excel() {
+		return jobCategory;
+	}
 	
 		
 	}
