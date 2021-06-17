@@ -81,13 +81,17 @@ public class Main{
 		 * Locate 
 		 * 
 		 */
+		
+		//-- Beginning pay grade
+		/*
 		navigation.Wait();
 		navigation.navigateToUserManagement();//User should be navigated to the user management page at first
 		navigation.setMouseOverOnJob();
 		navigation.selectPayGrades();
-	//	navigation.selectPayGrades();
+
 		
 		DDT ddt = new DDT();
+		
 		try {
 			ddt.getPayGradeData_Excel();//There's a high dependency, need to fix that
 		} catch (BiffException e) {
@@ -98,7 +102,36 @@ public class Main{
 			e.printStackTrace();
 		}
 		
+		*/
+		
 		//--End verify pay grade
+		
+		
+		//Beginning Employment Status
+		navigation.Wait();
+		navigation.navigateToUserManagement();//User should be navigated to the user management page at first
+		navigation.setMouseOverOnJob();
+		navigation.selectEmpStatus();
+
+		
+		DDT ddt = new DDT();
+		
+		try {
+			ddt.setEmpStatus_Excel();//There's a high dependency, need to fix that
+			String empData[] = ddt.getEmpStatus_Excel();
+			VerifyEmploymentStatus empStatus = new VerifyEmploymentStatus();
+			empStatus.setEmploymentStatus(empData);
+			System.out.println(empStatus.getEmploymentStatus());
+
+			
+		} catch (BiffException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		//--End Employment Status
 		
 	}
 	

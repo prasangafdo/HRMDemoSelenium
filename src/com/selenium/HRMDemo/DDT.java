@@ -10,6 +10,9 @@ import jxl.read.biff.BiffException;
 
 public class DDT {
 	
+	/*
+	 * This class works as the background worker for data driven testing.	
+	 */
 	private String[] jobTitle = new String[4];
 	private String[] jobDesc = new String[4];
 	private String[] jobNote = new String[4];
@@ -18,6 +21,8 @@ public class DDT {
 	private String[] gradeCurrency = new String[5];
 	private String[] gradeMinSalary = new String[5];	
 	private String[] gradeMaxSalary = new String[5];
+	
+	private String[] emplymentStatus = new String[4];
 	
 	String fileLocation= "C:/Users/Prasanga Fernando/Documents/Eclipse/DataDrivenTesting/Book1.xls"; //Since I want to access these details from many methods, I'm making it global.
 	File file = new File(fileLocation);
@@ -66,7 +71,7 @@ public class DDT {
 	 * Modify DDT class
 	 * ================
 	 * Create a new method to read data from 3rd excel sheet and save data into a temporary array - done
-	 * Send those data to "addPayGrade" method
+	 * Send those data to "addPayGrade" method - done
 	 * 
 	 */
 	
@@ -104,8 +109,31 @@ public class DDT {
 		}
 		
 		DDTVerifyPayGrades payGrade = new DDTVerifyPayGrades();
-		payGrade.addPayGrade(gradeName, gradeCurrency, gradeMinSalary, gradeMaxSalary);
+		System.out.println(payGrade.addPayGrade(gradeName, gradeCurrency, gradeMinSalary, gradeMaxSalary));
 		
+	}
+	
+	public void setEmpStatus_Excel() throws BiffException, IOException {
+		
+		Workbook wb = Workbook.getWorkbook(file);
+		Sheet sheet = wb.getSheet(3);
+		int rowsCount = sheet.getRows();
+		int columnsCount = sheet.getColumns();
+		
+		for(int i=0;i<rowsCount;i++) {
+			for(int j=0;j<columnsCount;j++) {
+				Cell cell = sheet.getCell(j,i);
+				value = cell.getContents();
+				emplymentStatus[i] = value;
+				//System.out.println(value);
+				
+			}
+		}
+		
+	}
+	
+	public String[] getEmpStatus_Excel() {
+		return emplymentStatus;
 	}
 	
 	
