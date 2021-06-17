@@ -100,6 +100,11 @@ public class VerifyPageNavigation extends Main{
 		
 	}
 	
+	public void selectJobCategories() {
+		setMouseOverOnJob();
+		driver.findElement(By.id("menu_admin_jobCategory")).click();
+	}
+	
 	
 
 }
