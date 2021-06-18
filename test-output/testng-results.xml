@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-06-14T11:17:18 IST" name="Default suite" finished-at="2021-06-14T11:17:25 IST" duration-ms="7719">
+  <suite started-at="2021-06-17T13:18:00 IST" name="Default suite" finished-at="2021-06-17T13:18:00 IST" duration-ms="41">
     <groups>
     </groups>
-    <test started-at="2021-06-14T11:17:18 IST" name="Default test" finished-at="2021-06-14T11:17:25 IST" duration-ms="7719">
-      <class name="com.selenium.HRMDemoTestNG.VerifyLogin">
-        <test-method signature="verifyLoginWithCorrectCredentials()[pri:0, instance:com.selenium.HRMDemoTestNG.VerifyLogin@6986bbaf]" started-at="2021-06-14T11:17:18 IST" name="verifyLoginWithCorrectCredentials" finished-at="2021-06-14T11:17:25 IST" duration-ms="7690" status="PASS">
+    <test started-at="2021-06-17T13:18:00 IST" name="Default test" finished-at="2021-06-17T13:18:00 IST" duration-ms="41">
+      <class name="com.selenium.HRMDemoTestNG.VerifyUserManagementPage">
+        <test-method signature="verifyAddUser()[pri:0, instance:com.selenium.HRMDemoTestNG.VerifyUserManagementPage@6986bbaf]" started-at="2021-06-17T13:18:00 IST" name="verifyAddUser" finished-at="2021-06-17T13:18:00 IST" duration-ms="9" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyLoginWithCorrectCredentials -->
-      </class> <!-- com.selenium.HRMDemoTestNG.VerifyLogin -->
+        </test-method> <!-- verifyAddUser -->
+      </class> <!-- com.selenium.HRMDemoTestNG.VerifyUserManagementPage -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

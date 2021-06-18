@@ -10,4 +10,7 @@ package com.selenium.HRMDemoTestNG;
 public interface VerifyAdminFunctionalities {
 
 	public void verifyLoginWithCorrectCredentials();
+	
+	public void verifyCreateNewUser();
 }
+	
